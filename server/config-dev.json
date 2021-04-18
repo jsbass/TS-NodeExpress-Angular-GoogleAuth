@@ -1,0 +1,12 @@
+{
+    "serverPort": 8080,
+    "googleClientId": "",
+    "sessionSecrets": [
+        "this_is_the_secret"
+    ],
+    "db": {
+        "host": "",
+        "user": "",
+        "password": ""
+    }
+}

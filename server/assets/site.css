@@ -1,0 +1,18 @@
+/* CSS */
+:root {
+    --palatinate-purple: hsla(310, 64%, 34%, 1);
+    --skobeloff: hsla(184, 79%, 47%, 1);
+    --champagne-pink: hsla(22, 11%, 93%, 1);
+    --international-orange-golden-gate-bridge: hsla(6, 72%, 77%, 1);
+    --raisin-black: hsla(340, 13%, 18%, 1);
+
+    --text-color: var(--raisin-black);
+    --primary-color: var(--international-orange-golden-gate-bridge);
+    --secondary-color: var(--skobeloff);
+    --light-color: var(--champagne-pink);
+    --dark-color: var(--palatinate-purple);
+}
+
+html, body {
+    background-color: var(--light-color);
+}

@@ -1,0 +1,25 @@
+<%- include('../layout/_top', this); %>
+<div class="row">
+    <form method="POST" class="col-lg-4 needs-validation" novalidate="true">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" value="<%= model.email %>" />
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="password">Password:</label>
+            <input class="form-control" type="password" name="password" />
+        </div>
+        <input type="hidden" name="_csrf" value="<%= validationToken %>" />
+        <% if(errors.length !== 0) { %>
+        <ul class="text-danger mb-3">
+            <% errors.forEach(function(error) { %>
+                <li><%= error %></li>
+            <% }); %>
+        </ul>
+        <% } %>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <p>Don't have an account <a href="signup">Click Here</a> to create an account</p>
+</div>
+<%- include('../layout/_bottom', this); %>

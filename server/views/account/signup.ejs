@@ -1,0 +1,33 @@
+<%- include('../layout/_top', this); %>
+<div class="row">
+    <form method="POST" class="col-lg-4" novalidate="true">
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" name="email" value="<%= model.email %>" />
+        </div>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" class="form-control" name="name" value="<%= model.name %>" />
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" name="password" />
+        </div>
+        <div class="mb-3">
+            <label for="passwordConfirm" class="form-label">Confirm Password:</label>
+            <input type="password" class="form-control" name="passwordConfirm" />
+        </div>
+
+        <input type="hidden" name="_csrf" value="<%= validationToken %>" />
+        <% if(errors.length !== 0) { %>
+        <ul class="text-danger">
+            <% errors.forEach(function(error) { %>
+                <li><%= error %></li>
+            <% }); %>
+        </ul>
+        <% } %>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<%- include('../layout/_bottom', this); %>

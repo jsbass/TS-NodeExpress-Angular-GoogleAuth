@@ -1,0 +1,5 @@
+{
+    "watch": ["./"],
+    "exec": "npm run serve",
+    "ext": "ts,ejs,json"
+}
